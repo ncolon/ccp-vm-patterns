@@ -1,14 +1,22 @@
+########################################
+# PROVIDER VARIABLES
+########################################
 variable "gcp_credentials" {
-  type    = string
-  default = ""
+  type = string
 }
 
 variable "gcp_region" {
-  type    = string
-  default = ""
+  type = string
 }
 
 variable "gcp_project" {
-  type    = string
-  default = ""
+  type = string
+}
+########################################
+# END PROVIDER VARIABLES
+########################################
+
+variable "preexisting_infra" {
+  type    = bool
+  default = false
 }

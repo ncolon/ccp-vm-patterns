@@ -1,19 +1,16 @@
 ########################################
-# PROVIDER VARIABLES
+# END PROVIDER VARIABLES
 ########################################
-variable "vsphere_user" {
-  type    = string
-  default = ""
+variable "softlayer_username" {
+  type = string
 }
 
-variable "vsphere_password" {
-  type    = string
-  default = ""
+variable "softlayer_api_key" {
+  type = string
 }
 
-variable "vsphere_server" {
-  type    = string
-  default = ""
+variable "ibmcloud_api_key" {
+  type = string
 }
 ########################################
 # END PROVIDER VARIABLES
