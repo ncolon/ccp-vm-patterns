@@ -1,0 +1,44 @@
+{
+  "patterns": [
+    {
+      "id": "1",
+      "repository": "http://github.ibm.com/dte2.0/ccp-vm-patterns/",
+      "folder": "aws-vm",
+      "version": "0.0.0",
+      "destription": "Deploy a VM on AWS",
+      "cloud": "aws"
+    },
+    {
+      "id": "2",
+      "repository": "http://github.ibm.com/dte2.0/ccp-vm-patterns/",
+      "folder": "azure-vm",
+      "version": "0.0.0",
+      "destription": "Deploy a VM on Azure",
+      "cloud": "azure"
+    },
+    {
+      "id": "3",
+      "repository": "http://github.ibm.com/dte2.0/ccp-vm-patterns/",
+      "folder": "gcp-vm",
+      "version": "0.0.0",
+      "destription": "Deploy a VM on Google Cloud",
+      "cloud": "gcp"
+    },
+    {
+      "id": "4",
+      "repository": "http://github.ibm.com/dte2.0/ccp-vm-patterns/",
+      "folder": "ibmcloud-vm",
+      "version": "0.0.0",
+      "destription": "Deploy a VM on IBM Cloud",
+      "cloud": "ibmcloud"
+    },
+    {
+      "id": "5",
+      "repository": "http://github.ibm.com/dte2.0/ccp-vm-patterns/",
+      "folder": "vsphere-vm",
+      "version": "0.0.0",
+      "destription": "Deploy a VM on vSphere",
+      "cloud": "vsphere"
+    }
+  ]
+}
