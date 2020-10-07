@@ -70,6 +70,23 @@ resource "aws_security_group" "sg" {
   }
 }
 
+resource "random_string" "random" {
+  length  = 16
+  special = false
+  upper   = false
+}
+
+
+resource "tls_private_key" "sshkey" {
+  algorithm = "RSA"
+  rsa_bits  = 4096
+}
+
+resource "aws_key_pair" "sshkey" {
+  key_name   = "dte-2.0-${random_string.random.result}"
+  public_key = tls_private_key.sshkey.public_key_openssh
+}
+
 resource "aws_instance" "vm" {
   count                  = var.aws_vm_count
   ami                    = data.aws_ami.ami.id
@@ -77,4 +94,5 @@ resource "aws_instance" "vm" {
   subnet_id              = var.aws_preexisting_infra ? data.aws_subnet.subnet[0].id : aws_subnet.subnet[0].id
   vpc_security_group_ids = concat(aws_security_group.sg.*.id, list(data.aws_security_groups.sg[0].ids[0]))
   availability_zone      = data.aws_availability_zones.aws_azs.names[0]
+  key_name               = aws_key_pair.sshkey.key_name
 }
