@@ -6,7 +6,7 @@
       "folder": "aws-vm",
       "version": "0.0.0",
       "destription": "Deploy a VM on AWS",
-      "cloud": "aws",
+      "cloud": "aws"
     },
     {
       "id": "2",
