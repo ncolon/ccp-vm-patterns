@@ -54,6 +54,11 @@ variable "aws_preexisting_infra" {
   default = false
 }
 
+variable "aws_public" {
+  type    = bool
+  default = true
+}
+
 variable "aws_securitygroup_id" {
   type    = string
   default = ""
